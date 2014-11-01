@@ -101,6 +101,11 @@ if(_south  !=  null)
   System.out.println("south door is open");
 
 }
+
+public String draw()
+{
+  return " R ";
+}
  
 
 

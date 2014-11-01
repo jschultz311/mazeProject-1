@@ -14,17 +14,24 @@ public class tester
         boolean done = false;
         while(!done)
         {
-            System.out.println("Where would you like to move?");
+
+            maze.drawMaze();
+            //tell user their door options
+            maze.printCurrentDoors();   
+
+
+            System.out.println("\nWhere would you like to move?");
             System.out.print("up, down, left, or right?  ");
             String move = userIn.nextLine();
 
-//verify if move is possible
+
+            //verify if move is possible
             boolean canGo = maze.checkMove(move);
             System.out.println("canGo is " + canGo);
 
             if(canGo)
                 done = maze.move(move);
-            maze.printCurrentDoors();
+            
         }
 
 
