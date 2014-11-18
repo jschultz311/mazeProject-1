@@ -1,0 +1,1 @@
+public interface PassageRight extends I_Passage {}

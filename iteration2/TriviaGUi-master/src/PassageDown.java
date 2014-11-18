@@ -1,0 +1,1 @@
+public interface PassageDown extends I_Passage {}
