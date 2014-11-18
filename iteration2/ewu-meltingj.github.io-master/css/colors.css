@@ -1,0 +1,76 @@
+input[type=checkbox]:not(:checked) ~ .main-wrapper section .main-content {
+	background: #fff;
+	color: rgba(0,0,0,1);
+}
+input[type=checkbox]:not(:checked) ~ .main-wrapper section span.bio-block {color: #222;}
+input[type=checkbox]:not(:checked) ~ .main-wrapper section .bio-block span {background: #88c3ad;}
+input[type=checkbox]:not(:checked) ~ .main-wrapper section .bio-text {background: #fff;}
+input[type=checkbox]:checked ~ .main-wrapper section .bio-text {background: #1d1f2b;}
+input[type=checkbox]:checked ~ .full-background {background: #ae1c46;}
+
+/*important*/
+div.main-content {background: #101112;border-top: 1px solid #c12451;}
+
+
+/*main-nav unchecked*/
+section label[for*="image-"] {background: #fff;}
+section label[for*="image-"]:after {border-bottom: 10px solid #5a957f;}
+input[type=radio]:checked + section label[for*="image-"] {background: #88c3ad;color: #fff;}
+input[type=radio]:checked + section label[for*="image-"]:after {border-bottom: 10px solid #5a957f;}/*0197b5*/
+
+/*main-nav checked*/
+input[type=checkbox]:checked ~ .main-wrapper section label[for*="image-"] {background: #c12451;border: 1px solid #1d1f2b; border-bottom: 0; color: #000;}
+input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:checked + section .main-content {color: #fcfcfc;background: #1d1f2b;}
+
+/*info-header unchecked*/
+.main-wrapper .info-header {background: #88c3ad;}
+.main-wrapper .content-wrapper:after {border-bottom: 10px solid #5a957f;}/*0197b5*/
+.main-wrapper .info-header span {color: #fff;}
+
+/*info-header checked*/
+input[type=checkbox]:checked ~ .main-wrapper .info-header {background: #c12451; color: #000;}
+input[type=checkbox]:checked ~ .main-wrapper .info-header span {color: #000;}
+
+
+/*text color unchecked*/
+.main-wrapper h1,
+.main-wrapper h2,
+.main-wrapper h3 {color: #444;}
+.main-wrapper p {color: #222;}
+em {background-color: #88c3ad;}
+a:link, a:hover, a:visited, a:active {color: #5a957f;}
+
+/*text color checked*/
+input[type=checkbox]:checked ~ .main-wrapper h1,
+input[type=checkbox]:checked ~ .main-wrapper h2,
+input[type=checkbox]:checked ~ .main-wrapper h3 {color: #fff;}
+input[type=checkbox]:checked ~ .main-wrapper p {color: #eee;}
+input[type=checkbox]:checked ~ .main-wrapper em {background-color: #c12451;}
+input[type=checkbox]:checked ~ .main-wrapper a:link, 
+input[type=checkbox]:checked ~ .main-wrapper a:hover, 
+input[type=checkbox]:checked ~ .main-wrapper a:visited, 
+input[type=checkbox]:checked ~ .main-wrapper a:active {color: #c12451;}
+
+
+/*workedu unchecked*/
+.tree-item-info {border-left: 1px solid #88c3ad;}
+
+/*workedu checked*/
+input[type=checkbox]:checked ~ .main-wrapper .tree-item-info {border-left: 1px solid #c12451;}
+
+/*hexagons unchecked*/
+.hex-wrapper .hexagon {background: #88c3ad;}
+.hex-wrapper .hexagon:before {border-bottom: 25px solid #88c3ad;}
+.hex-wrapper .hexagon:after {border-top: 25px solid #88c3ad;}
+
+/*hexagons checked*/
+input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper p {color: #fff;}
+input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hexagon {background: #c12451;}
+input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hexagon:before {border-bottom: 25px solid #c12451;}
+input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hexagon:after {border-top: 25px solid #c12451;}
+
+
+
+/*decrese width to compensate for faux 3d plud add box shadwos for cool feel*/
+
+

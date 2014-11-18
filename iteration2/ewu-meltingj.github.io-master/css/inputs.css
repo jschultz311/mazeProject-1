@@ -1,0 +1,29 @@
+/*input globals*/
+.hide-keep-functionality {position: absolute;top: -9999px;left: -9999px;z-index: 1337;}
+/* input right clicker */
+label[for*="image-"] {
+	position: absolute;
+	z-index: 200;
+	width: 100px;
+	text-align: center;
+	moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
+}
+
+/* input logo clicker */
+label#logo {
+	position: absolute;
+	top: -62px;
+	right: 30px;
+	z-index: 9999;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
+	color: #222;
+}
+/*default face*/
+input[type=checkbox] ~ .main-wrapper label#logo:after {content: "OFF"; font-weight: 700}
+input[type=checkbox]:checked ~ .main-wrapper label#logo:after {content: "ON";}

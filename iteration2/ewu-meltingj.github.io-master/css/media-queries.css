@@ -1,0 +1,103 @@
+@media only screen and (max-width:970px){
+	div.content-wrapper {width: calc(100% - 40px);}
+	.full-step-one {width: calc(100% - 20px);}
+	input[type=checkbox]:checked ~ .main-wrapper .full-checked-one {width: calc(100% - 20px);}
+	.hide-step-one {display: none;visibility: hidden;}
+	input[type=checkbox]:checked ~ .main-wrapper .hide-checked-one{display: none;visibility: hidden;}
+	.clearfix-step-one{ display: block; }.clearfix-step-one:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+	/*end defaults*/
+}
+@media only screen and (max-width:970px){ 
+	.full-step-two{width: calc(100% - 20px);}
+	input[type=checkbox]:checked ~ .main-wrapper .full-checked-two {width: calc(100% - 20px);}
+	.hide-step-two{display: none;visibility: hidden;}
+	input[type=checkbox]:checked ~ .main-wrapper .hide-checked-two{display: none;visibility: hidden;}
+	.clearfix-step-two{ display: block; }.clearfix-step-two:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+	/*end defaults*/
+
+}
+@media only screen and (max-width:786px){
+	.full-step-three{width: calc(100% - 20px);}
+	input[type=checkbox]:checked ~ .main-wrapper .full-checked-three {width: calc(100% - 20px);}
+	.hide-step-three{display: none;visibility: hidden;}
+	input[type=checkbox]:checked ~ .main-wrapper .hide-checked-three{display: none;visibility: hidden;}
+	.clearfix-step-three{ display: block; }.clearfix-step-three:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+	/*end defaults*/
+	span.hyphen-2{display: block; visibility: hidden; height: 0; width: 0;}
+	span.hyphen-header{display: block; visibility: hidden; height: 0; width: 0;}
+}
+@media only screen and (max-width:700px){
+	.full-step-four{width: calc(100% - 20px);}
+	.hide-step-four{display: none;visibility: hidden;}
+}
+@media only screen and (max-width:600px){
+	.full-step-five{width: calc(100% - 20px);}
+	span.hyphen-2{display: inline; visibility: visible; height: auto; width: auto;}
+}
+/*575*/
+@media only screen and (max-width:575px){
+	input[type=checkbox]:not(:checked) ~ div.main-wrapper, input[type=checkbox]:not(:checked) ~ div.main-wrapper section {top: 30px;}
+	input[type=checkbox]:not(:checked) ~ .main-wrapper section:nth-of-type(4) label[for*="image-"] {top: -78px; right: 20px;}
+	input[type=checkbox]:not(:checked) ~ .main-wrapper section:nth-of-type(5) label[for*="image-"] {top: -78px; right: 120px;}
+	input[type=checkbox]:not(:checked) ~ .main-wrapper section:nth-of-type(4) label[for*="image-"]:after {border-right: 10px solid transparent;width: calc(100% - 10px);}
+	input[type=checkbox]:not(:checked) ~ .main-wrapper section:nth-of-type(3) label[for*="image-"]:after {border-left: 10px solid transparent;width: calc(100% - 10px);}
+	input[type=checkbox]:not(:checked) ~ .main-wrapper label#logo {top: -100px;}
+}
+@media only screen and (max-width:500px){
+	span.hyphen{display: block; visibility: hidden; height: 0; width: 0;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(2) .main-content {top:2px; left: 2px;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(3) .main-content {top:6px; left: 6px;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(4) .main-content {top:15px; left: 15px;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(5) .main-content {top:39px; left: 39px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:not(:nth-of-type(5)):checked ~ section:nth-of-type(5) .main-content {top:15px; left: 15px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:not(:nth-of-type(4)):checked ~ section:nth-of-type(4) .main-content {top:6px; left: 6px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:not(:nth-of-type(3)):checked ~ section:nth-of-type(3) .main-content {top:2px; left: 2px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:not(:nth-of-type(2)):checked ~ section:nth-of-type(2) .main-content {top:0px; left: 0px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:checked + section .main-content {top:39px;left: 39px;}
+	
+	input[type=checkbox]:checked ~ .main-wrapper section .main-content{width: calc(100% - 40px);}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:checked + section label[for*="image-"] {top: 10px;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(1) label[for*="image-"] {top: -33px; right: 214px;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(2) label[for*="image-"] {top: -30px; right: 170px;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(3) label[for*="image-"] {top: -22px; right: 122px;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(4) label[for*="image-"] {top: -13px; right: 74px;}
+	input[type=checkbox]:checked ~ .main-wrapper section:nth-of-type(5) label[for*="image-"] {top: 10px;right: 10px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:nth-of-type(5):checked + section label[for*="image-"] {right: 10px; z-index: 9030;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:nth-of-type(4):checked + section label[for*="image-"] {right: 50px; z-index: 9030;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:nth-of-type(3):checked + section label[for*="image-"] {right: 90px; z-index: 9030;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:nth-of-type(2):checked + section label[for*="image-"] {right: 130px; z-index: 9030;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:nth-of-type(1):checked + section label[for*="image-"] {right: 170px; z-index: 9030;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:not(:nth-of-type(5)):checked ~
+	input[type=radio]:nth-of-type(5) + section label[for*="image-"] {top: -13px;right: 34px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:not(:nth-of-type(4)):checked ~
+	input[type=radio]:nth-of-type(4) + section label[for*="image-"] {top: -22px;right: 82px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:not(:nth-of-type(3)):checked ~
+	input[type=radio]:nth-of-type(3) + section label[for*="image-"] {top: -30px;right: 130px;}
+	input[type=checkbox]:checked ~ .main-wrapper input[type=radio]:not(:nth-of-type(2)):checked ~
+	input[type=radio]:nth-of-type(2) + section label[for*="image-"] {top: -33px;right: 174px;}
+}
+@media only screen and (max-width:803px){
+	input[type=checkbox]:not(:checked) ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(4) {margin-top: -105px;margin-left: 52px;}
+}
+@media only screen and (max-width:698px){
+	input[type=checkbox]:not(:checked) ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(4) {margin-top: -22px;margin-left: 52px;}
+	input[type=checkbox]:not(:checked) ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(3) {margin-top: -105px;margin-left: 52px;}
+}
+@media only screen and (max-width:490px){
+	input[type=checkbox]:not(:checked) ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(4) {margin-left: 0;}
+	input[type=checkbox]:not(:checked) ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(3) {margin-top: -22px;margin-left: 0;}
+	input[type=checkbox]:not(:checked) ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(2) {margin-top: -188px;}
+}
+@media only screen and (max-width:892px){
+	input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(4) {margin-top: -105px;margin-left: 52px;}
+}
+@media only screen and (max-width:788px){
+	input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(4) {margin-top: -22px;margin-left: 52px;}
+	input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(3) {margin-top: -105px;margin-left: 52px;}
+}
+@media only screen and (max-width:580px){
+	input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(4) {margin-left: 0;}
+	input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(3) {margin-top: -22px;margin-left: 0;}
+	input[type=checkbox]:checked ~ .main-wrapper .hex-wrapper .hex-group:nth-of-type(2) {margin-top: -188px;}
+}
+
