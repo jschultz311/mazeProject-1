@@ -8,7 +8,7 @@ public class Question
 {
 	Random rand = new Random();
 	int random = 0;
-	int range = 1;
+	int range;
 	String quest;
 	String userAnswer;
 	boolean answer;
@@ -38,58 +38,27 @@ public class Question
 			System.err.println(e.getClass().getName() + ": " + e.getMessage());
 			
 		}
-		System.out.println("Opened database successfully");
+		//System.out.println("Opened database successfully");
 	}
 	
-	public String getTFQuestion() throws SQLException 
+	
+	public String getQuestion(String table) throws SQLException 
 	{
 		stmt = c.createStatement();
-		//rs = stmt.executeQuery("SELECT * FROM TRUEFALSE");
-		//range = databaseRows(rs);
-		rs = stmt.executeQuery( "SELECT question FROM TRUEFALSE WHERE id == " + range); 
+		countRows = stmt.executeQuery("SELECT * FROM " + table);
+		range = databaseRows(countRows);
+		rs = stmt.executeQuery( "SELECT question FROM " + table + " WHERE id == " + (range)); 
 		quest = rs.getString("question");
 		System.out.println(quest);
 		userAnswer = kb.next();
 		return userAnswer;
 	}
-	
-	public String getMultQuestion() throws SQLException
-	{
-		stmt = c.createStatement();
-		//rs = stmt.executeQuery("SELECT * FROM MULTIPLE");
-		//range = databaseRows(rs);
-		rs = stmt.executeQuery( "SELECT question FROM MULTIPLE WHERE id == " + range); 
-		quest = rs.getString("question");
-		System.out.println(quest);
-		userAnswer = kb.next();
-		return userAnswer;
-	}
-	
-	public boolean getTFAnswer(String guess) throws SQLException
+
+	public boolean getAnswer(String guess, String table) throws SQLException
 	{
 		String correct;
 		stmt = c.createStatement();
-		rs = stmt.executeQuery( "SELECT answer FROM TRUEFALSE WHERE question like '%" + quest + "%'");
-		correct = rs.getString("answer");
-		if(guess.equals(correct))
-		{
-			answer = true;
-			System.out.println("Correct!");
-		}
-		else
-		{
-			answer = false;
-			System.out.println("Wrong!");
-		}
-		
-		return answer;
-	}
-	
-	public boolean getMultAnswer(String guess) throws SQLException
-	{
-		String correct;
-		stmt = c.createStatement();
-		rs = stmt.executeQuery( "SELECT answer FROM MULTIPLE WHERE question like '%" + quest + "%'");
+		rs = stmt.executeQuery( "SELECT answer FROM " + table + " WHERE question like '%" + quest + "%'");
 		correct = rs.getString("answer");
 		if(guess.equals(correct))
 		{
@@ -108,17 +77,20 @@ public class Question
 	public boolean askQuestion() throws SQLException
 	{
 		random = rand.nextInt(2);
-		System.out.println(random);
+		String table;
+		
 		if(random != 1)
 		{
-			userAnswer = getTFQuestion();
-			answer = getTFAnswer(userAnswer);
+			table = "TRUEFALSE";
+			userAnswer = getQuestion(table);
+			answer = getAnswer(userAnswer, table);
 			
 		}
 		else
 		{
-			userAnswer = getMultQuestion();
-			answer = getMultAnswer(userAnswer);
+			table = "MULTIPLE";
+			userAnswer = getQuestion(table);
+			answer = getAnswer(userAnswer, table);
 		}
 		return answer;
 	}
@@ -132,7 +104,9 @@ public class Question
 			count ++;
 		}while(newSet.next());
 		
-		return count;
+		random = rand.nextInt(count-1);
+		return random;
 	}
 	
 }
+
