@@ -38,27 +38,28 @@ public class Question
 			System.err.println(e.getClass().getName() + ": " + e.getMessage());
 			
 		}
-		//System.out.println("Opened database successfully");
+		
 	}
 	
 	
-	public String getQuestion(String table) throws SQLException 
+	public String getQuestion() throws SQLException 
 	{
 		stmt = c.createStatement();
-		countRows = stmt.executeQuery("SELECT * FROM " + table);
+		countRows = stmt.executeQuery("SELECT * FROM QUESTIONS");
 		range = databaseRows(countRows);
-		rs = stmt.executeQuery( "SELECT question FROM " + table + " WHERE id == " + (range)); 
+		rs = stmt.executeQuery( "SELECT question FROM QUESTIONS WHERE id == " + (range)); 
 		quest = rs.getString("question");
 		System.out.println(quest);
 		userAnswer = kb.next();
+		userAnswer.toUpperCase();
 		return userAnswer;
 	}
 
-	public boolean getAnswer(String guess, String table) throws SQLException
+	public boolean getAnswer(String guess) throws SQLException
 	{
 		String correct;
 		stmt = c.createStatement();
-		rs = stmt.executeQuery( "SELECT answer FROM " + table + " WHERE question like '%" + quest + "%'");
+		rs = stmt.executeQuery( "SELECT answer FROM QUESTIONS WHERE question like '%" + quest + "%'");
 		correct = rs.getString("answer");
 		if(guess.equals(correct))
 		{
@@ -73,25 +74,12 @@ public class Question
 		
 		return answer;
 	}
-	
+
 	public boolean askQuestion() throws SQLException
 	{
-		random = rand.nextInt(2);
-		String table;
+		userAnswer = getQuestion();
+		answer = getAnswer(userAnswer);
 		
-		if(random != 1)
-		{
-			table = "TRUEFALSE";
-			userAnswer = getQuestion(table);
-			answer = getAnswer(userAnswer, table);
-			
-		}
-		else
-		{
-			table = "MULTIPLE";
-			userAnswer = getQuestion(table);
-			answer = getAnswer(userAnswer, table);
-		}
 		return answer;
 	}
 	
@@ -109,4 +97,3 @@ public class Question
 	}
 	
 }
-
