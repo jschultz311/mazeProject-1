@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2306767559">
+    <data-source source="LOCAL" name="SQLite -" uuid="e679a21f-831e-49c7-947c-a1bb51f1f6fa">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/sample/db/mazeQuestions.db</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
