@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dbUtilWorking.iml" filepath="$PROJECT_DIR$/dbUtilWorking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dbUtility.iml" filepath="$PROJECT_DIR$/dbUtility.iml" />
     </modules>
   </component>
 </project>
