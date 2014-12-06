@@ -51,7 +51,6 @@ public class Question
 		quest = rs.getString("question");
 		System.out.println(quest);
 		userAnswer = kb.next();
-		userAnswer.toUpperCase();
 		return userAnswer;
 	}
 
@@ -77,7 +76,7 @@ public class Question
 
 	public boolean askQuestion() throws SQLException
 	{
-		userAnswer = getQuestion();
+		userAnswer = getQuestion().toUpperCase();
 		answer = getAnswer(userAnswer);
 		
 		return answer;
@@ -92,7 +91,7 @@ public class Question
 			count ++;
 		}while(newSet.next());
 		
-		random = rand.nextInt(count-1);
+		random = rand.nextInt(count-2) + 1;
 		return random;
 	}
 	
